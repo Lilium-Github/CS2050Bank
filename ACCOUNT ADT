@@ -1,0 +1,21 @@
+Abraham Maldonado
+9/24/2024
+
+ATTRIBUTES
+String holderFirstName
+String holderLastName
+String holderPassword
+String holderSSN
+String accountNumber
+double balance
+float interestRate (exclusive to Savings)
+
+METHODS
+Account(String name, String SSN): creates an Account object; accountNumber and holderPIN are randomly generated, balance and debt are initialized at 0.
+"get" methods for all attributes: simply returns the attribute
+"set" methods for holderFirstName, holderLastName, holderPassword, interestRate: simply set the attribute to the given value, returns nothing
+void deposit(double amt): if amt>0, adds amt to balance
+void withdraw(double amt): if amt>0, subtracts amt from balance
+void pay(double amt, Account recipient): if amt>0, subtracts amt from balance. deposits amt in recipient (exclusive to Checkings)
+void applyInterest(): Increments balance by the amount determined in interestRate (exclusive to Savings)
+
