@@ -1,20 +1,14 @@
-// Abraham Maldonado
-// CS 2050
-// 9/24/2024
-
-package program4;
+package program6;
 
 public class SavingsAccount extends Account {
+	private static final long serialVersionUID = 2L;
+	
 	private double interestRate;
 
-	public SavingsAccount(String firstName, String lastName, String ssn, String pass, double interest) {
-		holderFirstName = firstName;
-		holderLastName = lastName;
-		holderSSN = ssn;
-		holderPassword = pass;
+	public SavingsAccount(int accNum, double interest) {
 		interestRate = interest;
 
-		accountNumber = rand.nextInt(111111111, 1000000000); // random 9-digit account number
+		accountNumber = accNum; 
 		
 		balance = 0;
 	}
@@ -23,3 +17,4 @@ public class SavingsAccount extends Account {
 		balance += (balance * interestRate);
 	}
 }
+ 

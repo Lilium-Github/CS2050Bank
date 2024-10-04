@@ -1,33 +1,11 @@
-// Abraham Maldonado
-// CS 2050
-// 9/24/2024
+package program6;
 
-package program4;
-import java.util.Random;
+import java.io.Serializable;
 
-public class Account {
-	protected String holderFirstName;
-	protected String holderLastName;
-	protected String holderPassword;
-	protected String holderSSN;
+public class Account implements Serializable {
+	private static final long serialVersionUID = 1L;
 	protected int accountNumber;
 	protected double balance;
-		
-	Random rand = new Random();
-	
-	public String[] getName() {
-		String[] name = {holderFirstName, holderLastName};
-		return name;
-	}
-	
-	
-	public String getPassword() {
-		return holderPassword;
-	}
-	
-	public String getSSN() {
-		return holderSSN;
-	}
 	
 	public int getAccountNum() {
 		return accountNumber;
@@ -35,18 +13,6 @@ public class Account {
 	
 	public double getBalance() {
 		return balance;
-	}
-	
-	public void setFirstName(String newFirstName) {
-		holderFirstName = newFirstName;
-	}
-	
-	public void setLastName(String newLastName) {
-		holderLastName = newLastName;
-	}
-	
-	public void setPassword(String newPassword) {
-		holderPassword = newPassword;
 	}
 	
 	public void deposit(double amt) {
@@ -60,4 +26,10 @@ public class Account {
 			balance -= amt;
 		}
 	}
+	
+	public void printInfo() {
+		System.out.println(accountNumber);
+		System.out.println(balance);
+	}
 }
+
