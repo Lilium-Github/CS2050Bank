@@ -1,4 +1,4 @@
-package program6;
+package program7;
 
 public class CheckingAccount extends Account {
 	private static final long serialVersionUID = 3L;
@@ -14,5 +14,12 @@ public class CheckingAccount extends Account {
 			balance -= amt;
 			recipient.deposit(amt);
 		}
+	}
+	
+	public void printInfo() {
+		System.out.print("Checking Account Number: ");
+		System.out.println(accountNumber);
+		System.out.print("Balance: ");
+		System.out.println(balance);
 	}
 }

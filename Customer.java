@@ -1,4 +1,4 @@
-package program6;
+package program7;
 
 import java.io.*;
 
@@ -8,14 +8,18 @@ public class Customer implements Serializable {
 	private int customerID;
 	private String name;
 	
-	public Customer(String inName, Account inAcc, int inCustomerID) {
+	public Customer(String inName, int inCustomerID) {
 		name = inName;
-		acc = inAcc;
 		customerID = inCustomerID;
+		acc = null;
 	}
 	
 	public String getName() {
 		return name;
+	}
+	
+	public void setAccount(Account inAcc) {
+		acc = inAcc;
 	}
 	
 	public Account getAccount() {
@@ -27,7 +31,9 @@ public class Customer implements Serializable {
 	}
 	
 	public void printData() {
+		System.out.print("Name: ");
 		System.out.println(name);
+		System.out.print("Customer ID: ");
 		System.out.println(customerID);
 		acc.printInfo();
 	}

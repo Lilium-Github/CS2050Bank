@@ -1,4 +1,4 @@
-package program6;
+package program7;
 
 import java.io.*;
 

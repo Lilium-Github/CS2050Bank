@@ -1,4 +1,4 @@
-package program6;
+package program7;
 
 import java.io.Serializable;
 
@@ -28,7 +28,9 @@ public class Account implements Serializable {
 	}
 	
 	public void printInfo() {
+		System.out.print("Account Number: ");
 		System.out.println(accountNumber);
+		System.out.print("Balance: ");
 		System.out.println(balance);
 	}
 }

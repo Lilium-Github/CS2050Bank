@@ -1,4 +1,4 @@
-package program6;
+package program7;
 
 public class SavingsAccount extends Account {
 	private static final long serialVersionUID = 2L;
@@ -15,6 +15,13 @@ public class SavingsAccount extends Account {
 	
 	public void applyInterest() {
 		balance += (balance * interestRate);
+	}
+	
+	public void printInfo() {
+		System.out.print("Savings Account Number: ");
+		System.out.println(accountNumber);
+		System.out.print("Balance: ");
+		System.out.println(balance);
 	}
 }
  
